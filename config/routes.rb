@@ -1,4 +1,10 @@
 TwilioIs::Application.routes.draw do
+  
+  root to: 'sms#index'
+  
+  match '/receive-sms', to: 'sms#receive_text_message'
+  match '/send_sms', to: 'sms#send_text_message'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
